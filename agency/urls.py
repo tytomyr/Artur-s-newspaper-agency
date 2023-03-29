@@ -23,3 +23,5 @@ urlpatterns = [
          name="newspaper-list",
          ),
 ]
+
+app_name = "agency"
