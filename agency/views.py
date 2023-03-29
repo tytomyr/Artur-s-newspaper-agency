@@ -35,7 +35,7 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
     context_object_name = "topic_list"
     template_name = "agency/topic_list.html"
     queryset = Topic.objects.all()
-
+    paginate_by = 5
 
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     model = Topic
@@ -60,6 +60,7 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
     # context_object_name = "redactor_list"
     # template_name = "agency/redactor_list.html"
     # queryset = Redactor.objects.all()
+    paginate_by = 5
 
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
@@ -89,6 +90,7 @@ class NewsPaperListView(LoginRequiredMixin, generic.ListView):
     context_object_name = "newspaper_list"
     template_name = "agency/newspaper_list.html"
     queryset = NewsPaper.objects.all()
+    paginate_by = 5
 
 
 class NewsPaperDetailView(LoginRequiredMixin, generic.DetailView):
