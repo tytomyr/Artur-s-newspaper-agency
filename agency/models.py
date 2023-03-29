@@ -27,7 +27,7 @@ class Redactor(AbstractUser):
 class NewsPaper(models.Model):
     title = models.CharField(max_length=255, unique=True)
     content = models.TextField()
-    published_date = models.DateField()
+    published_date = models.DateTimeField()
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     publishers = models.ManyToManyField(Redactor, related_name="newspapers")
 

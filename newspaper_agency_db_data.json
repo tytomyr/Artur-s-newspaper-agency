@@ -1,0 +1,507 @@
+[
+  {
+    "model": "agency.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Climate Crisis"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Cyber Attack"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Health Pandemic"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Economic Boom"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Political Scandal"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Education Reform"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Tech Innovation"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Sports Triumph"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 9,
+    "fields": {
+      "name": "Fashion Trends"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 10,
+    "fields": {
+      "name": "Cultural Diversity"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 11,
+    "fields": {
+      "name": "Crime Wave"
+    }
+  },
+  {
+    "model": "agency.topic",
+    "pk": 12,
+    "fields": {
+      "name": "Environmental Impact"
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 1,
+    "fields": {
+      "years_of_experience": 20,
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": true,
+      "username": "admin.user",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin.user@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 2,
+    "fields": {
+      "years_of_experience": 4,
+      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "joyce.byers",
+      "first_name": "Joyce",
+      "last_name": "Byers",
+      "email": "joyce.byers@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:17:04Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 3,
+    "fields": {
+      "years_of_experience": 2,
+      "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jim.hopper",
+      "first_name": "Jim",
+      "last_name": "Hopper",
+      "email": "jim.hopper@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 4,
+    "fields": {
+      "years_of_experience": 1,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jonathan.byers",
+      "first_name": "Jonathan",
+      "last_name": "Byers",
+      "email": "jonathan.byers@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 5,
+    "fields": {
+      "years_of_experience": 3,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "dustin.henderson",
+      "first_name": "Dustin",
+      "last_name": "Henderson",
+      "email": "dustin.henderson@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 6,
+    "fields": {
+      "years_of_experience": 13,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mike.wheeler",
+      "first_name": "Mike",
+      "last_name": "Wheeler",
+      "email": "mike.wheeler@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 7,
+    "fields": {
+      "years_of_experience": 19,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lucas.sinclair",
+      "first_name": "Lucas",
+      "last_name": "Sinclair",
+      "email": "lucas.sinclair@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 8,
+    "fields": {
+      "years_of_experience": 9,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "nancy.wheeler",
+      "first_name": "Nancy",
+      "last_name": "Wheeler",
+      "email": "nancy.wheeler@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 9,
+    "fields": {
+      "years_of_experience": 7,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "martin.brenner",
+      "first_name": "Martin",
+      "last_name": "Brenner",
+      "email": "martin.brenner@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.redactor",
+    "pk": 10,
+    "fields": {
+      "years_of_experience": 5,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "billy.hargrove",
+      "first_name": "Billy",
+      "last_name": "Hargrove",
+      "email": "billy.hargrove@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+    {
+    "model": "agency.redactor",
+    "pk": 11,
+    "fields": {
+      "years_of_experience": 15,
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bob.newby",
+      "first_name": "Bob",
+      "last_name": "Newby",
+      "email": "bob.newby@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "Experts Warn of Impending Climate Catastrophe",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 1,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "Major Corporation Falls Victim to Cyber Attack",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 2,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "Pandemic Accelerates Development of Digital Healthcare",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 3,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        1,
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "Consumer Confidence Reaches Record Levels",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 4,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Politician Accused of Accepting Bribes",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 5,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "Experts Debate Best Practices for Virtual Learning",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 6,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Startup Raises Millions to Develop AI Technology",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 7,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "Against All Odds: Underdog Team Wins Championship",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 8,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "The Hottest Looks for Summer 2023",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 9,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Celebrating Differences: Festivals That Embrace Diversity",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 10,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 11,
+    "fields": {
+      "title": "Tackling the Rise in Crime: Strategies for Safer Communities",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 11,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        7,
+        3
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 12,
+    "fields": {
+      "title": "Climate Emergency: Urgent Action Needed to Save the Planet",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 12,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 13,
+    "fields": {
+      "title": "Uncovering the Truth: Investigative Report on Organized Crime",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 11,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        11,
+        7
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 14,
+    "fields": {
+      "title": "Breaking Barriers: Trailblazers in the Fight for Equality",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 10,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 15,
+    "fields": {
+      "title": "Sustainable Fashion: Brands Making a Difference",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 9,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "agency.newspaper",
+    "pk": 16,
+    "fields": {
+      "title": "Record-Breaking Performance: Athlete Shatters Previous Best",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "topic": 8,
+      "published_date": "2022-08-08T14:17:04Z",
+      "publishers": [
+        4
+      ]
+    }
+  }
+]
