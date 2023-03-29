@@ -1,7 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Topic Page</h1>
+   <h1>
+    Topic List
+  </h1>
 
+  {% if topic_list %}
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Articles </th>
+      </tr>
+
+      {% for topic in topic_list %}
+        <tr>
+          <td>
+              {{ topic.name }}
+          </td>
+          <td>
+            <a href="#">view all</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
 
 {% endblock %}

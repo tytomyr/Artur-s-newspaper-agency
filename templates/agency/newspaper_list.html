@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>NewsPaper Page</h1>
-
-
+  <h1>
+    Newspaper list
+  </h1>
+  {% if newspaper_list %}
+ <table class="table">
+      <tr>
+        <th>Name</th>
+      </tr>
+    {% for newspaper in newspaper_list %}
+      <tr>
+        <td>
+          <a href="#">{{ newspaper.title}}</a>
+        </td>
+      </tr>
+    {% endfor %}
+    </table>
+  {% endif %}
 {% endblock %}

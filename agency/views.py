@@ -34,12 +34,12 @@ class RedactorListView(generic.ListView):
     model = Redactor
     context_object_name = "redactor_list"
     template_name = "agency/redactor_list.html"
-    queryset = Topic.objects.all()
+    queryset = Redactor.objects.all()
 
 
 class NewsPaperListView(generic.ListView):
     model = NewsPaper
     context_object_name = "newspaper_list"
     template_name = "agency/newspaper_list.html"
-    queryset = Topic.objects.all()
+    queryset = NewsPaper.objects.all()
 
