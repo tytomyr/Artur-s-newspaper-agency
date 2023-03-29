@@ -7,7 +7,7 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from agency.forms import (NewsPaperForm,
                           RedactorUpdateForm,
-                          RedactorCreateForm)
+                          RedactorCreateForm, RedactorSearchForm, NewsPaperSearchForm, TopicSearchForm)
 from agency.models import Topic, Redactor, NewsPaper
 
 
@@ -37,6 +37,21 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
     queryset = Topic.objects.all()
     paginate_by = 5
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(TopicListView, self).get_context_data(**kwargs)
+        context["search_topic"] = TopicSearchForm()
+        return context
+
+    def get_queryset(self):
+        queryset = Topic.objects.all()
+        name = self.request.GET.get("name")
+        if name:
+            return self.queryset.filter(name__icontains=name)
+        return queryset
+
+
+
+
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     model = Topic
     fields = "__all__"
@@ -57,10 +72,22 @@ class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
-    # context_object_name = "redactor_list"
-    # template_name = "agency/redactor_list.html"
-    # queryset = Redactor.objects.all()
+    context_object_name = "redactor_list"
+    template_name = "agency/redactor_list.html"
+    queryset = Redactor.objects.all()
     paginate_by = 5
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(RedactorListView, self).get_context_data(**kwargs)
+        context["search_driver"] = RedactorSearchForm()
+        return context
+
+    def get_queryset(self):
+        queryset = Redactor.objects.all()
+        first_name = self.request.GET.get("first_name")
+        if first_name:
+            return self.queryset.filter(first_name=first_name.capitalize())
+        return queryset
 
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
@@ -91,6 +118,18 @@ class NewsPaperListView(LoginRequiredMixin, generic.ListView):
     template_name = "agency/newspaper_list.html"
     queryset = NewsPaper.objects.all()
     paginate_by = 5
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(NewsPaperListView, self).get_context_data(**kwargs)
+        context["search_title"] = NewsPaperSearchForm()
+        return context
+
+    def get_queryset(self):
+        queryset = NewsPaper.objects.all().select_related("topic")
+        title = self.request.GET.get("title")
+        if title:
+            return queryset.filter(title__icontains=title)
+        return queryset
 
 
 class NewsPaperDetailView(LoginRequiredMixin, generic.DetailView):

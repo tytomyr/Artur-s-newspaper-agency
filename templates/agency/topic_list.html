@@ -7,7 +7,10 @@
       Create
     </a>
   </h1>
-
+    <form action="" method="get" class="form-inline">
+    {{ search_topic }}
+      <input style="margin: 5px" class="btn btn-primary" type="submit" value="Search">
+    </form>
   {% if topic_list %}
     <table class="table">
       <tr>
@@ -23,7 +26,7 @@
               {{ topic.name }}
           </td>
           <td>
-            <a href="#">view all</a>
+            <a href="{% url 'agency:newspaper-list' %}">view all</a>
           </td>
           <td>
               <a href="{% url 'agency:topic-update' pk=topic.id %}">

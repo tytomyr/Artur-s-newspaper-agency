@@ -27,7 +27,7 @@ class RedactorCreateForm(forms.ModelForm):
 
 
 class RedactorSearchForm(forms.Form):
-    username = forms.CharField(
+    first_name = forms.CharField(
         max_length=255,
         required=False,
         label="",
@@ -36,7 +36,7 @@ class RedactorSearchForm(forms.Form):
 
 
 class NewsPaperSearchForm(forms.Form):
-    model = forms.CharField(
+    title = forms.CharField(
         max_length=255,
         required=False,
         label="",
