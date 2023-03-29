@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ newspaper.title }}
+  </h1>
+  <h5> {{ newspaper.topic.name }}</h5>
+  <h5>
+  By: {% for publisher in newspaper.publishers.all %}
+      <a href="{% url 'agency:redactor-detail' pk=publisher.id%}">
+      <h5>{{ publisher.first_name }} {{ publisher.last_name }}</h5>
+      </a>
+    {% endfor %}
+  <h5>Published: {{ newspaper.published_date }}</h5>
+  </h5>
+  <hr>
+  <p>{{ newspaper.content }}</p>
+{% endblock %}

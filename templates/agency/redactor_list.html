@@ -3,6 +3,9 @@
 {% block content %}
     <h1>
       Redactor List
+      <a href="{% url 'agency:redactor-create' %}" class="btn btn-primary link-to-page">
+        Create
+      </a>
     </h1>
 
     {% if redactor_list %}
@@ -10,11 +13,29 @@
       <tr>
         <th>Full name</th>
         <th>Experience</th>
+        <th>Update info</th>
+        <th>Delete driver</th>
       </tr>
     {% for redactor in redactor_list %}
       <tr>
-        <td>{{ redactor.first_name }} {{ redactor.last_name }}</td>
+
+        <td>
+          {{ redactor.first_name }}
+          {{ redactor.last_name }}
+          <a href="{% url 'agency:redactor-detail' pk=redactor.pk %}">profile page</a>
+        </td>
         <td>{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
+        <td>
+            <a href="{% url 'agency:redactor-update' pk=redactor.id %}">
+              Update
+            </a>
+        </td>
+        <td>
+            <a style="color: red"
+              href="{% url 'agency:redactor-delete' pk=redactor.id %}">
+              Delete
+            </a>
+        </td>
       </tr>
     {% endfor %}
 

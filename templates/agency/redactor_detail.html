@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <p><strong>Full name:</strong> {{ redactor.first_name }} {{ redactor.last_name }}</p>
+  <p><strong>Years of experience:</strong> {{ redactor.years_of_experience }}</p>
+
+  <div class="ml-3">
+    <h4>Articles</h4>
+
+    {% for article in redactor.newspapers.all %}
+        <hr>
+        <p><strong>Title:</strong> {{ article.title }}</p>
+        <p><strong>Topic:</strong> {{ article.topic.name }}</p>
+        <a href="{% url 'agency:newspaper-detail' pk=article.id%}">View</a>
+
+    {% endfor %}
+  </div>
+{% endblock %}
