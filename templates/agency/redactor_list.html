@@ -4,13 +4,13 @@
 {% block content %}
     <h1>
       Redactor List
-      <a href="{% url 'agency:redactor-create' %}" class="btn btn-primary link-to-page">
+      <a style="float: right" href="{% url 'agency:redactor-create' %}" class="btn btn-primary link-to-page">
         Create
       </a>
     </h1>
     <form action="" method="get" class="form-inline">
-    {{ search_driver }}
-      <input style="margin: 5px" class="btn btn-primary" type="submit" value="Search">
+    {{ search_driver|crispy }}
+      <input style="margin: 5px" class="btn btn-secondary" type="submit" value="Search">
     </form>
 
     {% if redactor_list %}

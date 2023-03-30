@@ -13,7 +13,7 @@ from .views import (
     NewsPaperUpdateView,
     RedactorCreateView,
     TopicCreateView,
-    NewsPaperCreateView, TopicUpdateView, TopicDeleteView,
+    NewsPaperCreateView, TopicUpdateView, TopicDeleteView, toggle_assign_to_article,
 )
 
 
@@ -75,6 +75,12 @@ urlpatterns = [
          NewsPaperDeleteView.as_view(),
          name="newspaper-delete",
          ),
+    path(
+        "newspapers/<int:pk>/toggle-assign/",
+        toggle_assign_to_article,
+        name="toggle-article-assign",
+    ),
+
 ]
 
 app_name = "agency"

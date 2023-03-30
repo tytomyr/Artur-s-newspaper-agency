@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
 from agency.models import NewsPaper, Redactor
 
 
@@ -17,13 +18,15 @@ class NewsPaperForm(forms.ModelForm):
 class RedactorUpdateForm(forms.ModelForm):
     class Meta:
         model = Redactor
-        fields = ("years_of_experience",)
+        fields = ("years_of_experience",
+                  "username",)
 
 
 class RedactorCreateForm(forms.ModelForm):
+
     class Meta:
         model = Redactor
-        fields = ("first_name", "last_name", "years_of_experience", "username",)
+        fields = "__all__"
 
 
 class RedactorSearchForm(forms.Form):

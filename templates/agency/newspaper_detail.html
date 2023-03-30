@@ -13,6 +13,16 @@
     {% endfor %}
   <h5>Published: {{ newspaper.published_date }}</h5>
   </h5>
+      {% if newspaper in user.newspapers.all %}
+      <a href="{% url 'agency:toggle-article-assign' pk=newspaper.id %}" class="btn btn-danger link-to-page">
+        Delete me from this article
+      </a>
+    {% else %}
+      <a href="{% url 'agency:toggle-article-assign' pk=newspaper.id %}" class="btn btn-success link-to-page">
+        Assign me from this article
+      </a>
+    {% endif %}
+
   <hr>
   <p>{{ newspaper.content }}</p>
 {% endblock %}

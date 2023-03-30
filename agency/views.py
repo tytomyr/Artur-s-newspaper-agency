@@ -50,8 +50,6 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
-
-
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     model = Topic
     fields = "__all__"
@@ -151,3 +149,15 @@ class NewsPaperUpdateView(LoginRequiredMixin, generic.UpdateView):
 class NewsPaperDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = NewsPaper
     success_url = reverse_lazy("agency:newspaper-list")
+
+
+@login_required
+def toggle_assign_to_article(request, pk):
+    redactor = Redactor.objects.get(id=request.user.id)
+    if (
+            NewsPaper.objects.get(id=pk) in redactor.newspapers.all()
+    ):
+        redactor.newspapers.remove(pk)
+    else:
+        redactor.newspapers.add(pk)
+    return HttpResponseRedirect(reverse_lazy("agency:newspaper-detail", args=[pk]))

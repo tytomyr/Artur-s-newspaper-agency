@@ -15,6 +15,7 @@ class Topic(models.Model):
 
 class Redactor(AbstractUser):
     years_of_experience = models.IntegerField()
+    date_joined = models.DateTimeField(auto_now_add=True, blank=True)
 
     class Meta:
         verbose_name = "redactor"
