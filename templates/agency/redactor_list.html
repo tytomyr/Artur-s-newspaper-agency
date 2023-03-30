@@ -2,49 +2,50 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-    <h1>
+    <h1 style="margin-top: 20px">
       Redactor List
-      <a style="float: right" href="{% url 'agency:redactor-create' %}" class="btn btn-primary link-to-page">
-        Create
-      </a>
+    <a href="{% url 'agency:redactor-create' %}" class="btn btn-primary link-to-page">
+      +
+    </a>
     </h1>
-    <form action="" method="get" class="form-inline">
-    {{ search_driver|crispy }}
-      <input style="margin: 5px" class="btn btn-secondary" type="submit" value="Search">
+    <form style="display: inline; margin: 5px" action="" method="get" class="form-inline">
+    {{ search_redactor|crispy }}
+      <input style=" display: inline; margin: 5px" class="btn btn-secondary" type="submit" value="Search">
     </form>
 
     {% if redactor_list %}
-    <table class="table">
+    <table class="table align-items-center mb-0">
+    <thead>
       <tr>
-        <th>Full name</th>
-        <th>Username  (link to detail page)</th>
-        <th>Experience</th>
-        <th>Update info</th>
-        <th>Delete driver</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Full name</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Username  (link to detail page)</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Experience</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Update info</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete driver</th>
       </tr>
     {% for redactor in redactor_list %}
       <tr>
 
-        <td>
+        <td class="mb-0 text-xs">
           {{ redactor.first_name }}
           {{ redactor.last_name }}
         </td>
-        <td><a href="{% url 'agency:redactor-detail' pk=redactor.pk %}">{{ redactor.username }} {% if user == redactor %} (Me){% endif %}</a></td>
-        <td>{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
+        <td><a class="text-xs font-weight-bold mb-0" href="{% url 'agency:redactor-detail' pk=redactor.pk %}">{{ redactor.username }} {% if user == redactor %} (Me){% endif %}</a></td>
+        <td class="mb-0 text-xs" >{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
         <td>
-            <a href="{% url 'agency:redactor-update' pk=redactor.id %}">
+            <a class="text-xs font-weight-bold mb-0"  href="{% url 'agency:redactor-update' pk=redactor.id %}">
               Update
             </a>
         </td>
         <td>
-            <a style="color: red"
+            <a class="text-xs font-weight-bold mb-0" style="color: red"
               href="{% url 'agency:redactor-delete' pk=redactor.id %}">
               Delete
             </a>
         </td>
       </tr>
     {% endfor %}
-
+    </thead>
     </table>
     {% endif %}
 {% endblock %}

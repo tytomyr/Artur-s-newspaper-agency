@@ -18,6 +18,9 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">sign out</a></li>
       {% endif %}
+</ul>
+<hr class="horizontal dark mt-0">
+      <ul class="sidebar-nav list-group" style="max-width: 10%">
       <li class="nav-item"><a class="nav-link" href="{% url 'agency:index' %}">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'agency:redactor-list' %}">Redactors</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'agency:topic-list' %}">Topics</a></li>

@@ -2,10 +2,10 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>
+  <h1 style="margin-top: 20px">
     Newspaper list
-  <a style="float: right" href="{% url 'agency:newspaper-create' %}" class="btn btn-primary link-to-page">
-      Create
+  <a href="{% url 'agency:newspaper-create' %}" class="btn btn-primary link-to-page">
+      +
   </a>
   </h1>
 
@@ -16,19 +16,19 @@
   {% if newspaper_list %}
  <table class="table">
       <tr>
-        <th>Name</th>
-        <th>Update</th>
-        <th>Delete</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Update</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
       </tr>
     {% for newspaper in newspaper_list %}
       <tr>
-        <td>
+        <td  class="text-xs font-weight-bold mb-0">
           <a href="{% url 'agency:newspaper-detail' pk=newspaper.pk %}">{{ newspaper.title}}</a>
         </td>
-        <td>
+        <td class="mb-0 text-xs" >
           <a style="color: gray" href="{% url 'agency:newspaper-update' pk=newspaper.pk%}">Update</a>
         </td>
-        <td>
+        <td class="mb-0 text-xs" >
           <a style="color: red" href="{% url 'agency:newspaper-delete' pk=newspaper.pk%}">Delete</a>
         </td>
       </tr>

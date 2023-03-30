@@ -77,7 +77,7 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(RedactorListView, self).get_context_data(**kwargs)
-        context["search_driver"] = RedactorSearchForm()
+        context["search_redactor"] = RedactorSearchForm()
         return context
 
     def get_queryset(self):

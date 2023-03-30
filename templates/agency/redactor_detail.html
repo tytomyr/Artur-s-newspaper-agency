@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <div class="card-body pt-2" style="margin-top: 35px">
   <p><strong>Full name:</strong> {{ redactor.first_name }} {{ redactor.last_name }}</p>
   <p><strong>Years of experience:</strong> {{ redactor.years_of_experience }}</p>
   <p><strong>username:</strong> {{ redactor.username }}</p>
@@ -15,5 +16,6 @@
         <a href="{% url 'agency:newspaper-detail' pk=article.id%}">View</a>
 
     {% endfor %}
+  </div>
   </div>
 {% endblock %}
