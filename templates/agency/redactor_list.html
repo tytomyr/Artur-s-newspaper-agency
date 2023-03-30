@@ -17,6 +17,7 @@
     <table class="table">
       <tr>
         <th>Full name</th>
+        <th>Username  (link to detail page)</th>
         <th>Experience</th>
         <th>Update info</th>
         <th>Delete driver</th>
@@ -27,8 +28,8 @@
         <td>
           {{ redactor.first_name }}
           {{ redactor.last_name }}
-          <a href="{% url 'agency:redactor-detail' pk=redactor.pk %}">profile page</a>
         </td>
+        <td><a href="{% url 'agency:redactor-detail' pk=redactor.pk %}">{{ redactor.username }} {% if user == redactor %} (Me){% endif %}</a></td>
         <td>{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
         <td>
             <a href="{% url 'agency:redactor-update' pk=redactor.id %}">

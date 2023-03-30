@@ -22,11 +22,11 @@ class RedactorUpdateForm(forms.ModelForm):
                   "username",)
 
 
-class RedactorCreateForm(forms.ModelForm):
+class RedactorCreateForm(UserCreationForm):
 
-    class Meta:
+    class Meta(UserCreationForm.Meta):
         model = Redactor
-        fields = "__all__"
+        fields = UserCreationForm.Meta.fields + ('years_of_experience',)
 
 
 class RedactorSearchForm(forms.Form):
