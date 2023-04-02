@@ -19,7 +19,7 @@ from .views import (
 
 urlpatterns = [
     path("", index, name="index"),
-    path("/admin/", index, name="admin"),
+    path("admin/", index, name="admin"),
     path("redactors/",
          RedactorListView.as_view(),
          name="redactor-list",

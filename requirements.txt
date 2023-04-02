@@ -1,0 +1,8 @@
+asgiref==3.6.0
+crispy-bootstrap4==2022.1
+Django==4.1.7
+django-crispy-forms==2.0
+exceptiongroup==1.1.1
+generic==1.1.1
+sqlparse==0.4.3
+tzdata==2023.3
