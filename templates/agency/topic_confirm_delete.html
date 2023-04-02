@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 style="color:#4267B2 ; margin-top: 20px">Delete topic?</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+
+    <input style="background: #D9544D; " type="submit" value="Yes" class="btn btn-danger">
+    <a href="{% url 'agency:topic-list' %}" class="btn btn-secondary">Cancel</a>
+  </form>
+{% endblock %}

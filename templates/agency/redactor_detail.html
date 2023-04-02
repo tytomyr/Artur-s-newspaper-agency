@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card-body pt-2" style="color: #4267B2; margin-top: 35px">
+  <p><strong>Full name:</strong> {{ redactor.first_name }} {{ redactor.last_name }}</p>
+  <p><strong>Years of experience:</strong> {{ redactor.years_of_experience }}</p>
+  <p><strong>username:</strong> {{ redactor.username }}</p>
+
+  <div class="ml-3">
+    <h3 style="color: #4267B2">Articles:</h3>
+
+    {% for article in redactor.newspapers.all %}
+        <hr>
+        <p><strong>Title:</strong> {{ article.title }}</p>
+        <p><strong>Topic:</strong> {{ article.topic.name }}</p>
+        <a class="btn btn-secondary" href="{% url 'agency:newspaper-detail' pk=article.id%}">View</a>
+
+    {% endfor %}
+  </div>
+  </div>
+{% endblock %}

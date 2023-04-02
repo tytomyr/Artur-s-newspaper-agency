@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <h1 style="color:#4267B2 ; margin-top: 20px">
+      Redactor List
+    <a style="background: linear-gradient(310deg, #00AAFF, #2255FF)" href="{% url 'agency:redactor-create' %}" class="btn btn-warning">
+      Add
+    </a>
+    </h1>
+    <form style="display: inline; margin: 5px" action="" method="get" class="form-inline">
+    {{ search_redactor|crispy }}
+      <input style="background: #4267B2; display: inline; margin: 5px" class="btn btn-secondary" type="submit" value="Search">
+    </form>
+
+    {% if redactor_list %}
+    <table class="table align-items-center mb-0">
+    <thead>
+      <tr>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Full name</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Username  (link to detail page)</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Experience</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Update info</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete driver</th>
+      </tr>
+    {% for redactor in redactor_list %}
+      <tr>
+
+        <td style="color: #4267B2" class="mb-0 text-xs">
+          {{ redactor.first_name }}
+          {{ redactor.last_name }}
+        </td>
+        <td><a style="color: #4267B2" class="text-xs  mb-0" href="{% url 'agency:redactor-detail' pk=redactor.pk %}">{{ redactor.username }} {% if user == redactor %} (Me){% endif %}</a></td>
+        <td style="color: #4267B2" class="mb-0 text-xs" >{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
+        <td>
+            <a style="color: #4267B2" class="text-xs  mb-0"  href="{% url 'agency:redactor-update' pk=redactor.id %}">
+              Update
+            </a>
+        </td>
+        <td>
+            <a class="text-xs font-weight-bold mb-0" style="color: #D9544D"
+              href="{% url 'agency:redactor-delete' pk=redactor.id %}">
+              Delete
+            </a>
+        </td>
+      </tr>
+    {% endfor %}
+    </thead>
+    </table>
+    {% endif %}
+{% endblock %}

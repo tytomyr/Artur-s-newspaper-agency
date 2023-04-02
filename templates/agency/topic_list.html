@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+
+   <h1 style="color: #4267B2; margin-top: 20px">
+    Topic List
+    <a style="background: linear-gradient(310deg, #00AAFF, #2255FF)" href="{% url 'agency:topic-create' %}" class="btn btn-warning">
+      Add
+    </a>
+  </h1>
+
+    <form style="display: inline; margin: 5px" action="" method="get" class="form-inline">
+    {{ search_topic|crispy }}
+      <input style="background: #4267B2; display: inline; margin: 5px" class="btn btn-secondary" type="submit" value="Search">
+    </form>
+  {% if topic_list %}
+  <div class="card">
+  <div class="table-responsive">
+    <table class="table align-items-center mb-0">
+    <thead>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Articles </th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Update</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
+      </tr>
+
+      {% for topic in topic_list %}
+        <tr>
+          <td style="color: #4267B2" class="mb-0 text-xs">
+              {{ topic.name }}
+          </td>
+          <td s class="mb-0 text-xs">
+            <a style="color: #4267B2" class="text-xs  mb-0" href="{% url 'agency:newspaper-list' %}">view all</a>
+          </td>
+          <td>
+              <a tyle="height=100px" style="color: #4267B2" class="text-xs mb-0" href="{% url 'agency:topic-update' pk=topic.id %}">
+                Update
+              </a>
+          </td>
+          <td>
+              <a class="text-xs font-weight-bold mb-0" style="color: #D9544D"
+                href="{% url 'agency:topic-delete' pk=topic.id %}">
+                Delete
+              </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </thead>
+    </table>
+  </div>
+  </div>
+  {% endif %}
+
+{% endblock %}
