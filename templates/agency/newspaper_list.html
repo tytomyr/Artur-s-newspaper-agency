@@ -2,37 +2,47 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1 style="margin-top: 20px">
+  <h1 style="color: #4267B2; margin-top: 20px">
     Newspaper list
-  <a href="{% url 'agency:newspaper-create' %}" class="btn btn-primary link-to-page">
-      +
+  <a style="background: linear-gradient(310deg, #00AAFF, #2255FF)" href="{% url 'agency:newspaper-create' %}" class="btn btn-warning">
+      Add
   </a>
   </h1>
 
     <form action="" method="get" class="form-inline">
     {{ search_title|crispy }}
-      <input style="margin: 5px" class="btn btn-secondary" type="submit" value="Search">
+      <input style="background: #4267B2; margin: 5px" class="btn btn-secondary" type="submit" value="Search">
     </form>
   {% if newspaper_list %}
- <table class="table">
+  <div class="card">
+  <div class="table-responsive">
+ <table class="table align-items-center mb-0">
+     <thead>
       <tr>
         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Link</th>
         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Update</th>
         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delete</th>
       </tr>
     {% for newspaper in newspaper_list %}
       <tr>
-        <td  class="text-xs font-weight-bold mb-0">
-          <a href="{% url 'agency:newspaper-detail' pk=newspaper.pk %}">{{ newspaper.title}}</a>
+        <td  style="color: #4267B2" class="mb-0 text-xs ">
+          {{ newspaper.title}}
+        </td>
+        <td style="height: 50px" class="mb-0 text-xs">
+          <a style="color: #4267B2" href="{% url 'agency:newspaper-detail' pk=newspaper.pk %}">Go to</a>
         </td>
         <td class="mb-0 text-xs" >
-          <a style="color: gray" href="{% url 'agency:newspaper-update' pk=newspaper.pk%}">Update</a>
+          <a style="color: #4267B2" href="{% url 'agency:newspaper-update' pk=newspaper.pk%}">Update</a>
         </td>
         <td class="mb-0 text-xs" >
-          <a style="color: red" href="{% url 'agency:newspaper-delete' pk=newspaper.pk%}">Delete</a>
+          <a style="color:  #D9544D" href="{% url 'agency:newspaper-delete' pk=newspaper.pk%}">Delete</a>
         </td>
       </tr>
     {% endfor %}
+    </thead>
     </table>
+  </div>
+  </div>
   {% endif %}
 {% endblock %}

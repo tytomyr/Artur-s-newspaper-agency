@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>
+  <h1 style="color:#4267B2 ; margin-top: 30px">
     {{ newspaper.title }}
   </h1>
-  <h5> {{ newspaper.topic.name }}</h5>
-  <h5>
+  <h5 style="color:#4267B2 ; margin-top: 30px"> {{ newspaper.topic.name }}</h5>
+  <h5 style="color:#4267B2 ; margin-top: 30px">
   By: {% for publisher in newspaper.publishers.all %}
       <a href="{% url 'agency:redactor-detail' pk=publisher.id%}">
-      <h5>{{ publisher.first_name }} {{ publisher.last_name }}</h5>
+        <h6 style="color:#4267B2; margin: 5px">{{ publisher.first_name }} {{ publisher.last_name }} </h6>
       </a>
     {% endfor %}
-  <h5>Published: {{ newspaper.published_date }}</h5>
+  <h5 style="color:#4267B2 ; margin-top: 30px">Published: {{ newspaper.published_date }}</h5>
   </h5>
       {% if newspaper in user.newspapers.all %}
-      <a href="{% url 'agency:toggle-article-assign' pk=newspaper.id %}" class="btn btn-danger link-to-page">
+      <a style="background: #D9544D" href="{% url 'agency:toggle-article-assign' pk=newspaper.id %}" class="btn btn-danger link-to-page">
         Delete me from this article
       </a>
     {% else %}
-      <a href="{% url 'agency:toggle-article-assign' pk=newspaper.id %}" class="btn btn-success link-to-page">
-        Assign me from this article
+      <a style="background: #50C878;" href="{% url 'agency:toggle-article-assign' pk=newspaper.id %}" class="btn btn-success link-to-page">
+        Assign me to this article
       </a>
     {% endif %}
 

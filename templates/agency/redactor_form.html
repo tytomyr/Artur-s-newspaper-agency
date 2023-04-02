@@ -3,11 +3,11 @@
 
 
 {% block content %}
-  <h1>{{ object|yesno:"Update,Create" }} redactor</h1>
+  <h1 style="color:#4267B2 ; margin-top: 30px" >{{ object|yesno:"Update,Create" }} redactor</h1>
   <form style="max-width: 30%" action="" method="post" novalidate>
     {% csrf_token %}
     {{ form|crispy }}
 
-    <input type="submit" value="Submit" class="btn btn-primary">
+    <input style="background: #4267B2" type="submit" value="Submit" class="btn btn-primary">
   </form>
 {% endblock %}

@@ -5,7 +5,7 @@
     <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
     <a class="navbar-brand m-0" href="{% url 'admin:index' %}">
       <img src="{% static 'img/logo-ct-dark.png' %}" class="navbar-brand-img h-100" alt="main_logo">
-      <span class="ms-1 font-weight-bold">NewsPaper Agency</span>
+      <span style="color: #4267B2" class="ms-1 font-weight-bold">NewsPaper Agency</span>
     </a>
   </div>
   <hr class="horizontal dark mt-0">
@@ -14,17 +14,17 @@
 <ul class="sidebar-nav list-group" style="max-width: 10%">
        {% if  user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url "agency:redactor-detail" pk=user.id %}">{{ user.username }}</a>
+            <a style="color: #4267B2" class="nav-link" href="{% url "agency:redactor-detail" pk=user.id %}">{{ user.username }}</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">sign out</a></li>
+          <li class="nav-item"><a style="color: #4267B2"  class="nav-link" href="{% url 'logout' %}">sign out</a></li>
       {% endif %}
 </ul>
 <hr class="horizontal dark mt-0">
-      <ul class="sidebar-nav list-group" style="max-width: 10%">
-      <li class="nav-item"><a class="nav-link" href="{% url 'agency:index' %}">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="{% url 'agency:redactor-list' %}">Redactors</a></li>
-      <li class="nav-item"><a class="nav-link" href="{% url 'agency:topic-list' %}">Topics</a></li>
-      <li class="nav-item"><a class="nav-link" href="{% url 'agency:newspaper-list' %}">NewsPapers</a></li>
+      <ul  class="sidebar-nav list-group" style="max-width: 10%">
+      <li class="nav-item"><a style="color: #4267B2" class="nav-link" href="{% url 'agency:index' %}">Home</a></li>
+      <li class="nav-item"><a style="color: #4267B2" class="nav-link" href="{% url 'agency:redactor-list' %}">Redactors</a></li>
+      <li class="nav-item"><a style="color: #4267B2" class="nav-link" href="{% url 'agency:topic-list' %}">Topics</a></li>
+      <li class="nav-item"><a style="color: #4267B2" class="nav-link" href="{% url 'agency:newspaper-list' %}">NewsPapers</a></li>
 </ul>
     </div>
   </div>

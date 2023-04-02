@@ -2,15 +2,15 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-    <h1 style="margin-top: 20px">
+    <h1 style="color:#4267B2 ; margin-top: 20px">
       Redactor List
-    <a href="{% url 'agency:redactor-create' %}" class="btn btn-primary link-to-page">
-      +
+    <a style="background: linear-gradient(310deg, #00AAFF, #2255FF)" href="{% url 'agency:redactor-create' %}" class="btn btn-warning">
+      Add
     </a>
     </h1>
     <form style="display: inline; margin: 5px" action="" method="get" class="form-inline">
     {{ search_redactor|crispy }}
-      <input style=" display: inline; margin: 5px" class="btn btn-secondary" type="submit" value="Search">
+      <input style="background: #4267B2; display: inline; margin: 5px" class="btn btn-secondary" type="submit" value="Search">
     </form>
 
     {% if redactor_list %}
@@ -26,19 +26,19 @@
     {% for redactor in redactor_list %}
       <tr>
 
-        <td class="mb-0 text-xs">
+        <td style="color: #4267B2" class="mb-0 text-xs">
           {{ redactor.first_name }}
           {{ redactor.last_name }}
         </td>
-        <td><a class="text-xs font-weight-bold mb-0" href="{% url 'agency:redactor-detail' pk=redactor.pk %}">{{ redactor.username }} {% if user == redactor %} (Me){% endif %}</a></td>
-        <td class="mb-0 text-xs" >{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
+        <td><a style="color: #4267B2" class="text-xs  mb-0" href="{% url 'agency:redactor-detail' pk=redactor.pk %}">{{ redactor.username }} {% if user == redactor %} (Me){% endif %}</a></td>
+        <td style="color: #4267B2" class="mb-0 text-xs" >{{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</td>
         <td>
-            <a class="text-xs font-weight-bold mb-0"  href="{% url 'agency:redactor-update' pk=redactor.id %}">
+            <a style="color: #4267B2" class="text-xs  mb-0"  href="{% url 'agency:redactor-update' pk=redactor.id %}">
               Update
             </a>
         </td>
         <td>
-            <a class="text-xs font-weight-bold mb-0" style="color: red"
+            <a class="text-xs font-weight-bold mb-0" style="color: #D9544D"
               href="{% url 'agency:redactor-delete' pk=redactor.id %}">
               Delete
             </a>
