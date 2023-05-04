@@ -53,3 +53,27 @@ class PrivateViewTests(TestCase):
 
         for test in tests:
             self.assertEqual(test.status_code, 200)
+
+    def test_topic_create(self):
+        self.assertEqual(Topic.objects.count(), 0)
+
+        topic_data = {
+            "name": "Sports",
+        }
+        response = self.client.post(TOPICS_URL, topic_data)
+
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(Topic.objects.count(), 1)
+        self.assertEqual(Topic.objects.first().name, "Sports")
+
+    def test_newspaper_delete(self):
+        topic = Topic.objects.create(name="Politics")
+        newspaper = NewsPaper.objects.create(title="Headline", topic=topic)
+
+        self.assertEqual(NewsPaper.objects.count(), 1)
+
+        delete_url = reverse("agency:newspaper-detail", kwargs={"pk": newspaper.pk})
+        response = self.client.delete(delete_url)
+
+        self.assertEqual(response.status_code, 204)
+        self.assertEqual(NewsPaper.objects.count(), 0)
