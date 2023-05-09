@@ -60,9 +60,10 @@ class PrivateViewTests(TestCase):
         topic_data = {
             "name": "Sports",
         }
-        response = self.client.post(TOPICS_URL, topic_data)
+        create_url = reverse("agency:topic-create")
+        response = self.client.post(create_url, topic_data, follow=True)
 
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(Topic.objects.count(), 1)
         self.assertEqual(Topic.objects.first().name, "Sports")
 
@@ -72,8 +73,8 @@ class PrivateViewTests(TestCase):
 
         self.assertEqual(NewsPaper.objects.count(), 1)
 
-        delete_url = reverse("agency:newspaper-detail", kwargs={"pk": newspaper.pk})
+        delete_url = reverse("agency:topic-delete", kwargs={"pk": topic.pk})
         response = self.client.delete(delete_url)
 
-        self.assertEqual(response.status_code, 204)
+        self.assertEqual(response.status_code, 302)
         self.assertEqual(NewsPaper.objects.count(), 0)

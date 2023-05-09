@@ -1,4 +1,14 @@
-# Artur-s-newspaper-agency"
+# Artur-s-newspaper-agency
+
+### Demo
+To check out web-site visit `https://arturs-agency.onrender.com/`
+Note, it may take sometime for a page to load. 
+You can use log-in credentials provided below
+```
+- Login: admin.user
+- Password: 1qazcde3
+```
+
 ### Installation
 
 Clone the repository by running the following command:
@@ -31,6 +41,6 @@ npm install lite-server
 To access the site, you need to create a user or use 
 already existing credentials
 ```
-- Login: `admin.user`
-- Password: `1qazcde3`
+- Login: admin.user
+- Password: 1qazcde3
 ```
