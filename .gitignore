@@ -1,3 +1,6 @@
 .idea
 venv
+*.json
+*.sqlite3
+node_modules
 **__pycache__

@@ -14,7 +14,7 @@ class Topic(models.Model):
 
 
 class Redactor(AbstractUser):
-    years_of_experience = models.IntegerField()
+    years_of_experience = models.IntegerField(null=True)
     date_joined = models.DateTimeField(auto_now_add=True, blank=True)
 
     class Meta:
